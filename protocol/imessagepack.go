@@ -1,7 +1,7 @@
 package protocol
 
 import (
-	"net"
+	"github.com/panjf2000/gnet"
 )
 
 /*
@@ -13,5 +13,5 @@ type IMessagePack interface {
 	// 请求消息解包方法
 	UnPack([]byte) (Imessage, error)
 	//	从conn中读取数据解包
-	ReadUnPack(net.Conn) (Imessage, error)
+	ReadUnPack(gnet.Conn) (Imessage, error)
 }
